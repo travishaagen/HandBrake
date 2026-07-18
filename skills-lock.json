@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "devcontainers-best-practices": {
+      "source": "afonsograca/devcontainers-best-practices",
+      "sourceType": "github",
+      "skillPath": "skills/devcontainers-best-practices/SKILL.md",
+      "computedHash": "d932a6e54100d035f46222e8409fd4bc19150a59b88ddb8552d5a7d13e397a35"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+	"name": "HandBrake (Ubuntu 22.04)",
+	"image": "mcr.microsoft.com/devcontainers/cpp:ubuntu22.04",
+	"features": {
+		"ghcr.io/devcontainers/features/rust:1": {},
+		"ghcr.io/anthropics/devcontainer-features/claude-code:1": {},
+		"ghcr.io/devcontainers/features/desktop-lite:1": {}
+	},
+	"forwardPorts": [6080],
+	"portsAttributes": {
+		"6080": {
+			"label": "Desktop (noVNC)"
+		}
+	},
+	"onCreateCommand": "bash .devcontainer/setup.sh",
+	"mounts": [
+		"source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind",
+		"source=${localEnv:HOME}/.claude.json,target=/home/vscode/.claude.json,type=bind"
+	],
+	"remoteUser": "vscode",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools-extension-pack"
+			]
+		}
+	}
+}
